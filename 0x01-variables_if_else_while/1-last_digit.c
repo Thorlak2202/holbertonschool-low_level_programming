@@ -7,7 +7,6 @@
 *
 * Return: return error 0
 */
-
 int main(void)
 {
 int n, Last;
