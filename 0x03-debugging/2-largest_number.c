@@ -11,19 +11,23 @@
 int largest_number(int a, int b, int c)
 {
 int largest;
+int x, y, z;
 
-if (a >= b && b >= c)
-{
-largest = a;
-}
-else if (b >= a && a >= c)
-{
-largest = b;
-}
-else
-{
-largest = c;
-}
+x = (a - b);
+z = (b - c);
+y = (c - a);
 
+if (x > 0 && z > 0)
+{
+largest = 'a';
+}
+else if (x < 0 && z > 0)
+{
+largest = 'b';
+}
+else if (y > 0 && z < 0)
+{
+largest = 'c';
+}
 return (largest);
 }
