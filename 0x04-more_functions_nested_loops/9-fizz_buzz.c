@@ -15,7 +15,7 @@ int x;
 			printf("FizzBuzz");
 			printf(" ");
 		}
-		else if (x % 5 == 0)
+		else if (x % 5 == 0 && x != 100)
 		{
 			printf("Buzz");
 			printf(" ");
@@ -24,6 +24,10 @@ int x;
 		{
 			printf("Fizz");
 			printf(" ");
+		}
+		else if (x == 100)
+		{
+			printf("Buzz");
 		}
 		else
 		{
