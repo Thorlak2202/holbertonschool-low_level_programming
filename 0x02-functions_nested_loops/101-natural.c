@@ -6,14 +6,11 @@
 */
 int main(void)
 {
-int x, y, z, sum;
+int x, sum;
 
 for (x = 0 ; x < 1024; x++)
 {
-	y = x % 3;
-	z = x % 5;
-
-if (y == 0 || z == 0)
+if (x % 3 == 0 || x % 5 == 0)
 	{
 	sum += x;
 	}
