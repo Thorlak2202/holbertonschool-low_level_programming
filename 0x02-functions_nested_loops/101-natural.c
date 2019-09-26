@@ -6,16 +6,17 @@
 */
 int main(void)
 {
-int y, x, sum, multiple;
+int x, y, z, sum;
 
-for (x = 0 ; x > 1024; x++)
+for (x = 0 ; x < 1024; x++)
 {
-y = x % 3;
-if (y == 0)
-{
-multiple = x;
-}
-sum = (multiple + x);
+	y = x % 3;
+	z = x % 5;
+
+if (y == 0 || z == 0)
+	{
+	sum += x;
+	}
 }
 printf("%d\n", sum);
 return (0);
