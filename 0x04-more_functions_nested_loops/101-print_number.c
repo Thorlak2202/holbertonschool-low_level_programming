@@ -32,7 +32,7 @@ else if (n <= 9 && n >= 0)
 {
 	_putchar((n % 10) + '0');
 }
-else if (n < 0 && n > -99)
+else if (n < 0 && n >= -99)
 {
 	y = n * (-1);
 	_putchar(45);
