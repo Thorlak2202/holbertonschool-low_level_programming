@@ -2,7 +2,7 @@
 /**
 * reset_to_98 - updates the value of an int to 98.
 *
-* @*n: entry pointer character
+* @n: entry pointer character
 *
 * Return: 0 always when success.
 */
