@@ -18,13 +18,9 @@ int i, j;
 		for (j = 0; s2[j] != 0; j++)
 		{
 			if (s1[i] == s2[j])
-			{
 				return (0);
-			}
 			else if (s1[i] != s2[j])
-			{
 				return (s1[i] - s2[j]);
-			}
 		}
 	}
 return (0);
