@@ -10,15 +10,19 @@
 
 char *leet(char *s)
 {
-int i;
+int i, j;
+char st[5] = {'A', 'E', 'O', 'T', 'L'};
+char lt[5] = {'4', '3', '0', '7', '1'};
 
 for (i = 0; s[i] != 0; i++)
 {
-	if ((s[i] == 'a') || (s[i] == 'A'))
+	for (j = 0; st[j] != 0; j++)
 	{
-		s[i] = '4';
+		if ((s[i] == st[j]) || (s[i] == st[j] + 32))
+		{
+			s[i] = lt[j];
+		}
 	}
-
 }
 return (s);
 }
