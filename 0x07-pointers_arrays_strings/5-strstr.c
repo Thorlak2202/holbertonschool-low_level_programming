@@ -21,9 +21,13 @@ int i, j;
 		{
 			return (haystack);
 		}
-		else if (haystack[i+j] != needle[j])
+		else if (haystack[i + j] != needle[j])
 		{
 			break;
+		}
+		else if (needle[j] == '\0')
+		{
+			return (haystack + i);
 		}
 
 		else if (haystack[i] == needle[0])
@@ -33,5 +37,5 @@ int i, j;
 		}
 		}
 	}
-return ('\0');
+return (0);
 }
