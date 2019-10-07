@@ -17,7 +17,7 @@ int i, j, count;
 	{
 		count = s[i] - 1;
 
-		for (j = 0; j <= count; j++)
+		for (j = 0; j < count; j++)
 		{
 		if (s[i] == c)
 			{
