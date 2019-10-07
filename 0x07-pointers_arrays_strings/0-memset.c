@@ -7,7 +7,7 @@
 * @b: byte to fill.
 * @n: n bytes to be filled.
 *
-* Return:  returns 0 when success.
+* Return: returns the pointer value.
 */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -18,5 +18,5 @@ unsigned int i;
 	{
 		s[i] = b;
 	}
-return (0);
+return (s);
 }
