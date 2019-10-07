@@ -21,6 +21,11 @@ int i, j;
 		{
 			return (haystack);
 		}
+		else if (haystack[i+j] != needle[j])
+		{
+			break;
+		}
+
 		else if (haystack[i] == needle[0])
 		{
 			haystack += i;
