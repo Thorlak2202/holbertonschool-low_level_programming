@@ -1,10 +1,9 @@
 #include "holberton.h"
 
 /**
-* _strstr - finds occurrence of substring needle in string haystack..
+* print_chessboard - prints a chessboard.
 *
-* @haystack: entry values.
-* @needle: character to evaluate with.
+* @a: entry values.
 *
 * Return: returns the pointer value.
 */
