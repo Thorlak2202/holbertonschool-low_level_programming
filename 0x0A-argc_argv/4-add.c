@@ -38,7 +38,7 @@ else if (argc == 1)
 else
 {
 	printf("Errorisimo\n");
-	return(1);
+	return (1);
 }
 return (0);
 }
