@@ -3,13 +3,14 @@
 #include "holberton.h"
 
 /**
-* _isupper - checks if the entry char is uppercase or not
+* myname - prints the name of the program.
 *
-*@c: entry character
+* @argc: size of argv array.
+* @argv: flags.
 *
-* Return: 1 if uppercase, 0 otherwise.
+* Return: 0 if success.
 */
-int main(int argc, char *argv[])
+int myname(int argc, char *argv[])
 {
 int i;
 
