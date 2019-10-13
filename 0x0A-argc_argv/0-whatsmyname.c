@@ -3,14 +3,14 @@
 #include "holberton.h"
 
 /**
-* myname - prints the name of the program.
+* main - prints the name of the program.
 *
 * @argc: size of argv array.
 * @argv: flags.
 *
 * Return: 0 if success.
 */
-int myname(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 int i;
 
