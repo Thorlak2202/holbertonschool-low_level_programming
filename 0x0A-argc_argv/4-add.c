@@ -12,20 +12,27 @@
 */
 int main(int argc, char *argv[])
 {
-int i, sum = 0;
+int i, sum = 0, j;
+char *s;
 
 if (argc >= 2)
 {
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]))
+		s = argv[i];
+
+		for (j = 0; *s != '\0'; j++)
 	{
-		sum += atoi(argv[i]);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
+		if (s[j] >= 48 && s[j] <= 57)
+		{
+			sum += atoi(s);
+			s++;
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
 	}
 	printf("%d\n", sum);
@@ -33,12 +40,6 @@ if (argc >= 2)
 else if (argc == 1)
 {
 	printf("0\n");
-}
-
-else
-{
-	printf("Errorisimo\n");
-	return (1);
 }
 return (0);
 }
