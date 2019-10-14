@@ -12,7 +12,7 @@
 */
 int main(int argc, char *argv[])
 {
-int i, sum = 0, j;
+int i, sum = 0, j, l = 0;
 char *s;
 
 if (argc >= 2)
@@ -21,25 +21,23 @@ if (argc >= 2)
 	{
 		s = argv[i];
 
-		for (j = 0; *s != '\0'; j++)
-	{
-		if (s[j] >= 48 && s[j] <= 57)
+		for (j = 0; s[j] != '\0'; j++)
 		{
-			sum += atoi(s);
-			s++;
-		}
-		else
-		{
+		if (s[j] < 48 || s[j] > 57)
+			{
 			printf("Error\n");
 			return (1);
+			}
 		}
+	s++;
+	sum = atoi(argv[i]);
+	l += sum;
 	}
-	}
-	printf("%d\n", sum);
+printf("%d\n", l);
 }
-else if (argc == 1)
+else
 {
-	printf("0\n");
+printf("0\n");
 }
 return (0);
 }
