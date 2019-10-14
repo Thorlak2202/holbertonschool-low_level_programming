@@ -35,8 +35,8 @@ if (argc == 2)
 
 		}
 	}
+printf("%d\n", cents / 25);
 
-printf("%d\n", cents/25);
 }
 else
 {
