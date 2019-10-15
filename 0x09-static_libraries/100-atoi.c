@@ -1,1 +1,6 @@
-int _atoi(char *s);
+#include "holberton.h"
+
+int _atoi(char *s)
+{
+  return (*s);
+}
