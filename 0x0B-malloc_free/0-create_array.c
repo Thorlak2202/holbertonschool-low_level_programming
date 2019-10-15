@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 /**
-* main - prints the name of the program.
+* *create_array - creates an array with the character sent by parameter.
 *
-* @argc: size of argv array.
-* @argv: flags.
+* @size: size of the array.
+* @c: character to form the array.
 *
-* Return: 0 if success.
+* Return: returns the function to create array.
 */
 
 char *create_array(unsigned int size, char c)
