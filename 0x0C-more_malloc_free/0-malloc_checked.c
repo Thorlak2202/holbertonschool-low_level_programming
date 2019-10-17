@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
-* *_strdup - creates an array with the character sent by parameter.
+* *malloc_checked - assigns memory space with malloc.
 *
-* @str: pointer to a newly allocated memory space.
+* @b: pointer to a newly allocated memory space.
 *
 * Return: return NULL when function fails.
 */
