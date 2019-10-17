@@ -23,7 +23,7 @@ if (p == NULL)
 {
 	return (NULL);
 }
-for (i = min; i <= max; i++)
+for (; min <= max; i++)
 {
 	p[i] = min;
 	min++;
