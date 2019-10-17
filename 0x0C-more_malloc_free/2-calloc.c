@@ -3,11 +3,10 @@
 #include <stdlib.h>
 
 /**
-* *string_nconcat - creates an array with the character sent by parameter.
+* *_calloc - creates an array with the character sent by parameter.
 *
-* @s1: first string.
-* @s2: second string.
-* @n: max value to cut second string.
+* @nmemb: number of elements sent by parameter.
+* @size: size.
 *
 * Return: return NULL when function fails.
 */
@@ -20,7 +19,7 @@ if (size == 0 || nmemb == 0)
 {
 return (NULL);
 }
-ptr = malloc(size * nmemb);
+ptr = malloc(nmemb);
 if (ptr == NULL)
 {
 	return (NULL);
