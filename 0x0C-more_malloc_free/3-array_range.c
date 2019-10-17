@@ -18,14 +18,14 @@ if (min > max)
 {
 	return (NULL);
 }
-p = malloc(sizeof(int) * (max - min) + 4);
+p = malloc(sizeof(int) * (max - min) + sizeof(int));
 if (p == NULL)
 {
 	return (NULL);
 }
 for (i = min; i <= max; i++)
 {
-	p[i] = i;
+	p[i] = min;
 	min++;
 }
 return (p);
