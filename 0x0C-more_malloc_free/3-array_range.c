@@ -26,6 +26,7 @@ if (p == NULL)
 for (i = min; i <= max; i++)
 {
 	p[i] = i;
+	min++;
 }
 return (p);
 }
