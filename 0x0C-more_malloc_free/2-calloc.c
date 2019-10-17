@@ -19,7 +19,7 @@ if (size == 0 || nmemb == 0)
 {
 return (NULL);
 }
-ptr = malloc(nmemb);
+ptr = malloc(nmemb * size);
 if (ptr == NULL)
 {
 	return (NULL);
