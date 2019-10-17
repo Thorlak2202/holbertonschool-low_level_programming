@@ -18,7 +18,7 @@ if (min > max)
 {
 	return (NULL);
 }
-p = malloc(sizeof(int) * (max - min));
+p = malloc(sizeof(int) * (max - min) + 4);
 if (p == NULL)
 {
 	return (NULL);
@@ -26,7 +26,6 @@ if (p == NULL)
 for (i = min; i <= max; i++)
 {
 	p[i] = i;
-	min++;
 }
 return (p);
 }
