@@ -18,7 +18,7 @@ if (min > max)
 {
 	return (NULL);
 }
-p = malloc(sizeof(int) * (max - min) + sizeof(int));
+p = malloc((sizeof(int) * (max - min)) + sizeof(int));
 if (p == NULL)
 {
 	return (NULL);
