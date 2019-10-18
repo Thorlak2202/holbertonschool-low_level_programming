@@ -40,6 +40,11 @@ else if (new_size == 0 && ptr != NULL)
 free(ptr);
 return (NULL);
 }
+p = malloc(sizeof(size_t) * new_size);
+if (p == NULL)
+{
+	return (NULL);
+}
 free(ptr);
 return (p);
 }
