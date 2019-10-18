@@ -13,11 +13,12 @@
 */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	unsigned int *p;
+	unsigned int *point;
+	unsigned int i;
 
 if (new_size > old_size)
 {
-	p = malloc(sizeof(old_size) + (new_size - old_size));
+	point = malloc(sizeof(old_size) + (new_size - old_size));
 	if (ptr == NULL)
 	{
 		return (NULL);
@@ -29,8 +30,8 @@ else if (new_size == old_size)
 }
 else if (ptr == NULL)
 {
-	p = malloc(new_size);
-	if (p == NULL)
+	point = malloc(new_size);
+	if (point == NULL)
 	{
 		return (NULL);
 	}
@@ -40,11 +41,15 @@ else if (new_size == 0 && ptr != NULL)
 free(ptr);
 return (NULL);
 }
-p = malloc(sizeof(size_t) * new_size);
-if (p == NULL)
+point = malloc(sizeof(size_t) * new_size);
+if (point == NULL)
 {
 	return (NULL);
 }
+for (i = 0; i < new_size && i < old_size; i++)
+{
+	point[i] = ((int *)ptr)[i];
+}
 free(ptr);
-return (p);
+return (point);
 }
