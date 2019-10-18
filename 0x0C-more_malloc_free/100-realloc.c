@@ -25,6 +25,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 		if (point == NULL)
 			return (NULL);
+		
+		return (point);
 	}
 	else
 	{
