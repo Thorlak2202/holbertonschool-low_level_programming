@@ -2,11 +2,19 @@
 #define VARIADIC_H
 #include <stdarg.h>
 
+/**
+ * struct ty - struct.
+ *
+ * @ty: parameter.
+ * @f: pointer to function.
+ *
+ */
+
 typedef struct ty
 {
 	char *ty;
 	void (*f)(va_list typelist, char *sep);
-}ty_t;
+} ty_t;
 
 void ty_char(va_list typelist, char *sep);
 void ty_int(va_list typelist, char *sep);
