@@ -75,7 +75,7 @@ char *sep = "";
 
 va_start(typelist, format);
 
-while (format != NULL && format[i])
+while (format && format[i])
 {
 	j = 0;
 	while (ty[j].ty)
