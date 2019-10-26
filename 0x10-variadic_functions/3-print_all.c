@@ -1,7 +1,7 @@
+#include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "variadic_functions.h"
 
 /**
 * ty_char - Prints type char.
@@ -39,11 +39,8 @@ void ty_str(va_list typelist, char *sep)
 		printf("%s", sep);
 		printf("(nil)");
 	}
-	else
-	{
 	printf("%s", sep);
 	printf("%s", p);
-	}
 }
 /**
 * ty_flo -  Prints type float.
