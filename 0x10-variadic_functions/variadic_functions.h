@@ -5,13 +5,13 @@
 typedef struct ty
 {
 	char *ty;
-	void (*f)(va_list typelist);
+	void (*f)(va_list typelist, char *sep);
 }ty_t;
 
-void ty_char(va_list typelist);
-void ty_int(va_list typelist);
-void ty_str(va_list typelist);
-void ty_flo(va_list typelist);
+void ty_char(va_list typelist, char *sep);
+void ty_int(va_list typelist, char *sep);
+void ty_str(va_list typelist, char *sep);
+void ty_flo(va_list typelist, char *sep);
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
