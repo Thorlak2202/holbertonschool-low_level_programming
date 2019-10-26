@@ -38,7 +38,6 @@ void ty_str(va_list typelist, char *sep)
 	{
 		printf("%s(nil)", sep);
 		return;
-
 	}
 	printf("%s%s", sep, p);
 }
@@ -76,7 +75,7 @@ char *sep = "";
 
 va_start(typelist, format);
 
-while (format[i])
+while (format != NULL && format[i])
 {
 	j = 0;
 	while (ty[j].ty)
