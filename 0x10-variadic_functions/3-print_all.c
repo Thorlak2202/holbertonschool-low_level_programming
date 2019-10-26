@@ -36,11 +36,11 @@ void ty_str(va_list typelist, char *sep)
 
 	if (p == NULL)
 	{
-		printf("%s", sep);
-		printf("(nil)");
+		printf("%s(nil)", sep);
+		return;
+
 	}
-	printf("%s", sep);
-	printf("%s", p);
+	printf("%s%s", sep, p);
 }
 /**
 * ty_flo -  Prints type float.
