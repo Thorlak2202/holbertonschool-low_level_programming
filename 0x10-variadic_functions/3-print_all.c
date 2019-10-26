@@ -83,10 +83,10 @@ while (format != NULL && format[i])
 		if (format[i] == *ty[j].ty)
 		{
 			ty[j].f(typelist, sep);
+			sep = ", ";
 		}
 		j++;
 	}
-sep = ", ";
 i++;
 }
 va_end(typelist);
