@@ -75,10 +75,10 @@ char *sep = "";
 
 va_start(typelist, format);
 
-while (format && format[i])
+while (format != NULL && format[i])
 {
 	j = 0;
-	while (ty[j].ty)
+	while (j < 4)
 	{
 		if (format[i] == *ty[j].ty)
 		{
