@@ -23,6 +23,11 @@ if (new_end == NULL)
 	return (NULL);
 }
 
+while (str[i])
+{
+i++;
+}
+new_end->len = i;
 new_end->str = strdup(str);
 new_end->next = NULL;
 
@@ -39,11 +44,6 @@ while (end->next != NULL)
 
 end->next = new_end;
 
-while (str[i])
-{
-i++;
-}
-new_end->len = i;
 
 return (new_end);
 }
