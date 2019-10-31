@@ -8,11 +8,18 @@
 *
 * @head: pointer to the start of the list.
 *
-* Return: returns the address of the new element, or NULL if fails.
 */
 void free_list(list_t *head)
 {
+	list_t *freedom;
 
+	while (head != NULL)
+	{
+		freedom = head;
+		head = head->next;
+		free(freedom->str);
+		free(freedom);
+	}
 	if (head != NULL)
 	{
 	free(head->str);
