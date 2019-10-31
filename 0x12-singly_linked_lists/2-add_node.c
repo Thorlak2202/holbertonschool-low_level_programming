@@ -24,6 +24,7 @@ if (new == NULL)
 new->str = strdup(str);
 new->next = *head;
 *head = new;
+
 while (str[i])
 {
 i++;
