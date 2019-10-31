@@ -11,7 +11,7 @@
 */
 size_t print_list(const list_t *h)
 {
-int count = 0;
+unsigned long count = 0;
 
 while (h != NULL)
 {
@@ -28,5 +28,6 @@ h = h->next;
 count++;
 }
 }
+
 return (count);
 }
