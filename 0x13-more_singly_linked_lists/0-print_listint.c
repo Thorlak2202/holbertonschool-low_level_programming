@@ -15,12 +15,9 @@ unsigned long count = 0;
 
 if (h != NULL)
 {
-	while (h != '\0')
+	while (h != NULL)
 	{
-		if (h->n != '\0')
-		{
-		printf("%d\n", h->n);
-		}
+	printf("%d\n", h->n);
 	h = h->next;
 	count++;
 	}

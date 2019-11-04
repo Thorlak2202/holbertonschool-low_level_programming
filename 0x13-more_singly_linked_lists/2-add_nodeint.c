@@ -20,10 +20,12 @@ if (new == NULL)
 {
 	return (NULL);
 }
-
+if (head != NULL)
+{
 new->n = n;
 new->next = *head;
 *head = new;
+}
 
 return (new);
 }
