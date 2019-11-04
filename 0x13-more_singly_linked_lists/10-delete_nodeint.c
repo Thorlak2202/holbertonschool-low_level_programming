@@ -4,36 +4,40 @@
 #include "lists.h"
 
 /**
-* insert_nodeint_at_index - interts a new node at given index position
+* delete_nodeint_at_index - deletes a node at given index position.
 *
 * @head: pointer to the start of the list.
-* @idx: index position to add new node.
-* @n: data.
+* @index: index position of the node.
 *
 * Return: returns the address of the new node.
 */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *temp = *head;
-	listint_t *new_node;
+	listint_t *tmp = *head;
+	listint_t *prev;
 	unsigned int i = 0;
 
-new_node = malloc(sizeof(listint_t));
-if (new_node == NULL)
-{
-	return(-1);
-}
-
-if (temp != NULL)
-{
-	for (i = 0; i < index - 1; i++)
+	if (*head == NULL)
 	{
-		temp = temp->next;
+		return (-1);
 	}
-	new_node->next = temp->next;
-	new_node->next = temp->next;
-	temp->next = NULL;
 
-}
+	if (tmp != NULL && i == index)
+	{
+		*head = tmp->next;
+		free(tmp);
+		return (1);
+	}
+
+	while (tmp != NULL && i != index)
+	{
+		prev = tmp;
+		tmp = tmp->next;
+		i++;
+	}
+	prev->next = tmp->next;
+	tmp->next = prev;
+	free(tmp);
+
 return (1);
 }
