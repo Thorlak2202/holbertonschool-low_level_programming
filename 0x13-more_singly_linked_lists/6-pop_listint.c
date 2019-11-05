@@ -23,7 +23,9 @@ if (head == NULL)
 new = *head;
 *head = (*head)->next;
 i = new->n;
+if (new != NULL)
+{
 free(new);
-
+}
 return (i);
 }
