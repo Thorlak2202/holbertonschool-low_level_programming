@@ -34,14 +34,18 @@ if (temp != NULL)
 	}
 	else
 	{
-	for (i = 0; i < idx - 1; i++)
+	while (temp != NULL)
 	{
+		if (i == idx - 1)
+		{
+		new_node->next = temp->next;
+		temp->next = new_node;
+		new_node->n = n;
+		return (new_node);
+		}
 		temp = temp->next;
+		i++;
 	}
-	new_node->next = temp->next;
-	temp->next = new_node;
-	new_node->n = n;
-	return (new_node);
 	}
 }
 free(new_node);
