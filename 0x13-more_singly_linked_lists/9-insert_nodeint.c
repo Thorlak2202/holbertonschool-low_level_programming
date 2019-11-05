@@ -26,6 +26,14 @@ if (new_node == NULL)
 
 if (temp != NULL)
 {
+	if (idx == 0)
+	{
+		new_node->next = temp->next;
+		temp->next = new_node;
+		new_node->n = n;
+	}
+	else
+	{
 	for (i = 0; i < idx - 1; i++)
 	{
 		temp = temp->next;
@@ -33,10 +41,7 @@ if (temp != NULL)
 	new_node->next = temp->next;
 	temp->next = new_node;
 	new_node->n = n;
-}
-else
-{
-	return (NULL);
+	}
 }
 return (new_node);
 }
