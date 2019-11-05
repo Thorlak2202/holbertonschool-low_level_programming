@@ -34,5 +34,9 @@ if (temp != NULL)
 	temp->next = new_node;
 	new_node->n = n;
 }
+else
+{
+	return (NULL);
+}
 return (new_node);
 }
