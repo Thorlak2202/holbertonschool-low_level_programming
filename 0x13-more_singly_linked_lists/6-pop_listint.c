@@ -16,7 +16,7 @@ listint_t *new;
 int i = 0;
 
 
-if (head == NULL)
+if (*head == NULL)
 {
 	return (0);
 }
