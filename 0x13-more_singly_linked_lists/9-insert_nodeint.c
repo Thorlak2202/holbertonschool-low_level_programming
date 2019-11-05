@@ -41,7 +41,9 @@ if (temp != NULL)
 	new_node->next = temp->next;
 	temp->next = new_node;
 	new_node->n = n;
+	return (new_node);
 	}
 }
-return (new_node);
+free(new_node);
+return (NULL);
 }
