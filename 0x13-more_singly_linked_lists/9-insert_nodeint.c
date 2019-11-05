@@ -28,9 +28,10 @@ if (temp != NULL)
 {
 	if (idx == 0)
 	{
-		new_node->next = temp->next;
-		temp->next = new_node;
+		new_node->next = *head;
+		*head = new_node;
 		new_node->n = n;
+		return (new_node);
 	}
 	else
 	{
