@@ -22,7 +22,12 @@ if (n != '\0')
 		i = i / 10;
 		count++;
 	}
+	if (index <= 32)
 	value = (n >> index) & 1;
+	else
+	{
+		return (-1);
+	}
 
 return (value);
 }
