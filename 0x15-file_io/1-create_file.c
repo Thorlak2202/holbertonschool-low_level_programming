@@ -4,6 +4,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <string.h>
 #include "holberton.h"
 
 /**
@@ -28,11 +29,11 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	close(fd);
 	if (text_content != NULL)
 	{
-	write(fd, text_content, *text_content);
+	write(fd, text_content, strlen(text_content));
 	}
+	close(fd);
 
 	return (1);
 }
