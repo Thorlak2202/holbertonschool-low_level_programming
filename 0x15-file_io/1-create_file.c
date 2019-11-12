@@ -18,7 +18,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd = 0;
 
-	fd = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0600);
+	fd = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0600, S_IRUSR, S_IWUSR);
 
 	if (fd == -1)
 	{
@@ -33,9 +33,6 @@ int create_file(const char *filename, char *text_content)
 	{
 	write(fd, text_content, *text_content);
 	}
-	else
-	{
-		write(fd, text_content, '\0');
-	}
+
 	return (1);
 }
