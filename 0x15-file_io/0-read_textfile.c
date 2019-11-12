@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -21,8 +20,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t count = 0;
 	char *buf;
 
-	buf = malloc(sizeof(letters));
-	if (buf == '\0')
+	buf = malloc(letters);
+	if (buf == NULL)
 	{
 		return (0);
 	}
@@ -43,6 +42,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	dprintf(STDIN_FILENO, "%s", buf);
 
 	close(fd);
-
+	free(buf);
 	return (count);
 }
