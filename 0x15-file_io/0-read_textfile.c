@@ -38,12 +38,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buf[count] = '\0';
 
 	countwr += write(STDIN_FILENO, buf, count);
-	if (countwr == '\0')
+	if (countwr == -1)
 	{
 		return (0);
 	}
-
-
 	close(fd);
 	free(buf);
 	return (countwr);
