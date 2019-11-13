@@ -59,8 +59,11 @@ int main(int argc, char *argv[])
 	}
 	fdwr = open(argv[2], O_CREAT | O_RDWR | O_APPEND | O_TRUNC, S_IRUSR | S_IWUSR
 	| S_IRGRP | S_IWGRP | S_IROTH);
-	if (fd == -1)
-		return (-1);
+	if (fdwr == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[1]);
+		exit(99);
+	}
 
 	while ((count = read(fd, buf, 1024)) != 0)
 	{
