@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 	| S_IRGRP | S_IWGRP | S_IROTH);
 	if (fdwr == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 	}
 
@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 	count = write(fdwr, buf, count);
 	if (count == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 	}
 	}
