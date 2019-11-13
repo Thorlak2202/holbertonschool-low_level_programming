@@ -71,6 +71,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	}
+	free(buf);
 	close_args(fd, fdwr);
 	}
 	else
