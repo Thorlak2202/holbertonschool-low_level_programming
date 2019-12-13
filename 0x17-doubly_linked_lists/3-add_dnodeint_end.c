@@ -37,7 +37,7 @@ while (end->next != NULL)
 }
 
 end->next = new_end;
-
+new_end->next = NULL;
 
 return (new_end);
 }
