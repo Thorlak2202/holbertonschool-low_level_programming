@@ -4,10 +4,12 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
- */
+* print_dlistint - prints a doubly linked list.
+*
+* @h: pointer to the doubly linked list.
+*
+* Return: returns the number of nodes.
+*/
 size_t print_dlistint(const dlistint_t *h)
 {
 unsigned long count = 0;
