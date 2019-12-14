@@ -41,7 +41,7 @@ if (idx == 0)
 
 while (temp->next != NULL)
 {
-	if (i == idx - 1)
+	if (i == idx)
 	{
 	new_node->prev = temp;
 	new_node->next = temp->next;
@@ -51,7 +51,16 @@ while (temp->next != NULL)
 	temp = temp->next;
 	i++;
 }
-
+if (i == idx)
+{
+	new_node->prev = temp;
+	temp->next = NULL;
+	temp->next = new_node;
+}
+if (i < idx)
+{
 free(new_node);
 return (NULL);
+}
+return(new_node);
 }
