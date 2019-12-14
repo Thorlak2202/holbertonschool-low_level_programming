@@ -20,16 +20,18 @@ if (new == NULL)
 {
 	return (NULL);
 }
-if (new == NULL)
+if (head == NULL)
 {
-	return (NULL);
+	new->n = n;
+	new->next = NULL;
+	new->prev = NULL;
 }
 if (head != NULL)
 {
-new->n = n;
-new->next = *head;
-*head = new;
+	new->n = n;
+	new->next = *head;
+	new->prev = NULL;
+	*head = new;
 }
-
 return (new);
 }
