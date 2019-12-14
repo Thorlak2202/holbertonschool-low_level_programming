@@ -46,7 +46,7 @@ while (temp->next != NULL)
 if (i == idx)
 {
 	new_node->prev = temp;
-	temp->next = NULL;
+	new_node->next = NULL;
 	temp->next = new_node;
 }
 if (i < idx)
