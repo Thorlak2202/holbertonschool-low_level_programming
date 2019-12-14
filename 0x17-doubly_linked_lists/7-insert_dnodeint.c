@@ -39,13 +39,13 @@ if (idx == 0)
 	return (new_node);
 	}
 
-while (temp != NULL)
+while (temp->next != NULL)
 {
 	if (i == idx - 1)
 	{
+	new_node->prev = temp;
 	new_node->next = temp->next;
-	temp->next = new_node;
-	new_node->n = n;
+	temp->next->prev = new_node;
 	return (new_node);
 	}
 	temp = temp->next;
