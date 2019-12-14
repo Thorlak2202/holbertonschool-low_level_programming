@@ -27,14 +27,15 @@ if (new_node == NULL)
 {
 	return (NULL);
 }
+	new_node->n = n;
+	temp = *h;
 
 if (idx == 0)
 	{
-	new_node->n = n;
-	new_node->next = *h;
 	*h = new_node;
-	new_node->n = n;
+	new_node->next = temp;
 	new_node->prev = NULL;
+	temp->prev = new_node;
 	return (new_node);
 	}
 
