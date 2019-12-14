@@ -23,6 +23,7 @@ if (new == NULL)
 if (head == NULL)
 {
 	new->n = n;
+	*head = new;
 	new->next = NULL;
 	new->prev = NULL;
 }
@@ -30,8 +31,8 @@ if (head != NULL)
 {
 	new->n = n;
 	new->next = *head;
-	new->prev = NULL;
 	*head = new;
+	new->prev = NULL;
 }
 return (new);
 }
