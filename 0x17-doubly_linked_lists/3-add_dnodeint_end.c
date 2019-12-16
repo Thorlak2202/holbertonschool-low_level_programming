@@ -38,6 +38,15 @@ while (end->next != NULL)
 
 end->next = new_end;
 new_end->next = NULL;
+new_end->prev = end;
+	if (end != NULL)
+		{
+		end->next = new_end;
+		}
+	else
+	{
+	*head = new_end;
+	}
 
 return (new_end);
 }
