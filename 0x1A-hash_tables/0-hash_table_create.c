@@ -1,28 +1,25 @@
 #include "hash_tables.h"
 /**
- * struct hash_node_s - Node of a hash table
+ * hash_table_create - function that creates a hash table.
  *
- * @key: The key, string
- * The key is unique in the HashTable
- * @value: The value corresponding to a key
- * @next: A pointer to the next node of the List
+ * @size: the size of the array
+ * Return: a pointer to the newly created hash table.
  */
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-    hash_table_t *hash_t;
-    unsigned long int i;
+	hash_table_t *hash_t;
+	unsigned long int i;
 
-    if (size == 0)
-    {
-        return(NULL);
-    }
+	if (size == 0)
+	{
+		return (NULL);
+	}
 
-    hash_t = malloc(sizeof(hash_table_t));
-    if(hash_t == NULL)
-        return(NULL);
-    
-    hash_t->array = malloc(sizeof(hash_node_t *) * size);
+	hash_t = malloc(sizeof(hash_table_t));
+	if (hash_t == NULL)
+		return (NULL);
+	hash_t->array = malloc(sizeof(hash_node_t *) * size);
 	if (hash_t->array == NULL)
 	{
 		free(hash_t);
