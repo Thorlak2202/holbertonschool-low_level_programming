@@ -19,28 +19,35 @@ int first = 0;
 int last = size - 1;
 mid = (first + last) / 2;
 
-while (first <= last)
+if (array == NULL)
+	{
+		return (-1);
+	}
+else
 {
-	printf("Searching in array:");
-	for (i = first; i < last; i++)
-		printf("%i, ", array[i]);
-	printf("%i\n", array[i]);
-	if (array[mid] < value)
+	while (first <= last)
 	{
-		first = mid + 1;
-	}
-	else if (array[mid] == value)
-	{
-		return (mid);
-	}
-	else
-	{
-		last = mid - 1;
-	}
+		printf("Searching in array:");
+		for (i = first; i < last; i++)
+			printf("%i, ", array[i]);
+		printf("%i\n", array[i]);
+		if (array[mid] < value)
+		{
+			first = mid + 1;
+		}
+		else if (array[mid] == value)
+		{
+			return (mid);
+		}
+		else
+		{
+			last = mid - 1;
+		}
 
-	mid = (first + last) / 2;
+		mid = (first + last) / 2;
+	}
+	if (first > last)
+		return (-1);
 }
-if (first > last)
-	return (-1);
 return (0);
 }
