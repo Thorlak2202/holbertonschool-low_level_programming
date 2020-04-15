@@ -22,31 +22,26 @@ mid = (first + last) / 2;
 if (!array)
 	return (-1);
 
-else
+while (first <= last)
 {
-	while (first <= last)
+	printf("Searching in array:");
+	for (i = first; i < last; i++)
+		printf("%i, ", array[i]);
+	printf("%i\n", array[i]);
+	if (array[mid] < value)
 	{
-		printf("Searching in array:");
-		for (i = first; i < last; i++)
-			printf("%i, ", array[i]);
-		printf("%i\n", array[i]);
-		if (array[mid] < value)
-		{
-			first = mid + 1;
-		}
-		else if (array[mid] == value)
-		{
-			return (mid);
-		}
-		else
-		{
-			last = mid - 1;
-		}
-
-		mid = (first + last) / 2;
+		first = mid + 1;
 	}
-	if (first > last)
-		return (-1);
+	else if (array[mid] == value)
+	{
+		return (mid);
+	}
+	else
+	{
+		last = mid - 1;
+	}
+
+	mid = (first + last) / 2;
 }
-return (0);
+return (-1);
 }
