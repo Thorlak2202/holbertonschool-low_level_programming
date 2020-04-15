@@ -24,7 +24,7 @@ if (!array)
 
 while (first <= last)
 {
-	printf("Searching in array:");
+	printf("Searching in array: ");
 	for (i = first; i < last; i++)
 		printf("%i, ", array[i]);
 	printf("%i\n", array[i]);
