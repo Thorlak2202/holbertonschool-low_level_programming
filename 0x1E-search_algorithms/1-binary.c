@@ -19,10 +19,9 @@ int first = 0;
 int last = size - 1;
 mid = (first + last) / 2;
 
-if (array == NULL)
-{
+if (!array)
 	return (-1);
-}
+
 else
 {
 	while (first <= last)
